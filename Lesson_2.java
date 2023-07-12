@@ -1,17 +1,8 @@
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import org.json.*;
-
-
-
-
-
-
-
-
+import java.util.Scanner;
 
 /**
  * Получить исходную json строку из файла, используя FileReader или Scanner
@@ -35,10 +26,10 @@ public class Lesson_2 {
         String json = new StringBuilder().append("[{\"фамилия\":\"Иванов\",\"оценка\":\"5\",\"предмет\":\"Математика\"},")
                                          .append("{\"фамилия\":\"Петрова\",\"оценка\":\"4\",\"предмет\":\"Информатика\"},")
                                          .append("{\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}]").toString();
-       JSONArray jsonArray = new JSONArray (json);
-        for (int i = 0; i < jsonArray.length() ; i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            stringBuilder.append("Студент").append(jsonObject.getString("фамилия")).append("получил").append(jsonObject.gerString("оценка")).append("по предмету").append("по предмету").append(jsonObject.getString("предмет")).append(".n");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        for (int i = 0; i < number; i++) {
+            stringBuilder.append("Студент").append("фамилия").append("получил").append("оценка").append("по предмету").append("по предмету").append("предмет").append(".n");
         }
         File outputFile = new File("output.txt");
         File logFile = new File("log.txt");
