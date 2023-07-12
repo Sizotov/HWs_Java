@@ -4,23 +4,23 @@ import java.util.logging.*;
 public class Lesson_2_1 {
     private static Object args;
 
-    public static void ArrayInt(int[] arr) throws IOException {
+    public static void printArrayInt(int[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
-            System.out.printf("%d, arr[i]");
+            System.out.printf("%d, ", arr[i]);
         }
             System.out.print(arr[arr.length-1]);
-   public static void main (String[], args) {
+   public static void main(String[], args) throws IOException {
             Logger logger = Logger.getLogger(Lesson_2_1.class.getName());
             FileHandler fh = new FileHandler("logLesson_2_1.xml");
             logger.addHandler(fh);
             XMLFormatter xml = new XMLFormatter();
             fh.setFormatter(xml);
             logger.info("Массив: ");
-            int [] array = {1, 5, 3, -9, 3, 64, 0};
-            ArrayInt(array);
+            int [] array = {2, 6, 4, -8, 3, 46, 0};
+            printArrayInt(array);
             int[] newArr = listSort(array);
             System.out.printf("\n:Отсортированный массив: \n");
-            ArrayInt(newArr);
+            printArrayInt(newArr);
         }
     }
     public static int[] listSort(int [] arr){
