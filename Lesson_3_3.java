@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.Random;
 
 public class Lesson_3_3 {
@@ -22,7 +21,6 @@ public class Lesson_3_3 {
         planets.add("Moon");
         System.out.println(planets);
     }
-}
     static void PrintArray(ArrayList<Integer> arr) {
     Random rand = new Random();
         for (int element : arr) {
