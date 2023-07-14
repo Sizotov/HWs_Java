@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+
 public class Lesson_3_2 {
 
     public static void main(String[] args) {
-        ArrayList<Integer> array = new ArrayList<>();
-        array = FillRandomArray(10);
-        PrintArray(array);
-        int max = findMax(array);
-        int min = findMin(array);
-        Double middleCount = findMiddle(array);
+        ArrayList<Integer> list = new ArrayList<>();
+        list = FillRandomArray(10);
+        PrintArray(list);
+        int max = findMax(list);
+        int min = findMin(list);
+        Double middleCount = findMiddle(list);
         System.out.printf("Максимальный элемент: %d \n", max);
         System.out.printf("Минимальный элемент: %d \n", min);
         System.out.printf("Среднее арифметическое: %.1f \n", middleCount);
@@ -26,12 +27,12 @@ public class Lesson_3_2 {
         }
         System.out.println();
     }
-    static int FillRandomArray(int n) {
+    static ArrayList<Integer> FillRandomArray(int n) {
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             list.add((int) (Math.random() * 100));
         }
-        return(list.size());
+        return(list);
     }
     static int findMax(ArrayList<Integer> arr){
         int max=arr.get(0);
