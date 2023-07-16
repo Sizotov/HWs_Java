@@ -20,7 +20,7 @@ public class MyLinkedList {
     }
 
     String first() {
-        return arr[size - 1];
+        return arr[0];
     }
 }
 

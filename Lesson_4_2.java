@@ -10,12 +10,11 @@ public class Lesson_4_2 {
             MyLinkedList list = new MyLinkedList();
             list.enqueue("4");
             list.enqueue("6");
-            System.out.println(list.size);
             list.enqueue("3");
             list.enqueue("9");
             System.out.println(list.size);
             System.out.println(list.first());
-            /*System.out.println(list.dequeue());
-            */
+            System.out.println(list.dequeue());
+            System.out.println(list.dequeue());
         }
     }
