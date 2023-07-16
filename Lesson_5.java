@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Lesson_5 {
+    public static void main(String[] args) {
         String[] names = new String[]{
                 "Иванов Роман Артёмович", "Белов Роман Артёмович", "Истомин Иван Давидович",
                 "Дубовцева Татьяна Олеговна", "Дорн Артём Владимирович", "Панфилов Иван Максимович",
@@ -17,21 +18,18 @@ public class Lesson_5 {
             @Override
             public String toString() {
                 StringBuilder stringBuilder = new StringBuilder();
-                forEach((key, value) -> stringBuilder.append(String.format("%30s ",key)).append(" ").append(value).append("\n"));
+                forEach((key, value) -> stringBuilder.append(String.format("%30s ", key)).append(" ").append(value).append("\n"));
                 return stringBuilder.toString();
             }
         };
-
-        public int getNumber() {
-            ArrayList<Integer> list = new ArrayList<>();
-            for (int i = 0; i < names.length; i++) {
-                if(phoneBook.containsKey(names[i])) {
-                    phoneBook.get(names[i]).add(numbers[i]);
-                }
-                else{
-                    list.add(numbers[i]);
-                    phoneBook.put(names[i],list);
-                }
-            }   return(0);
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < names.length; i++) {
+            if (phoneBook.containsKey(names[i])) {
+                phoneBook.get(names[i]).add(numbers[i]);
+            } else {
+                list.add(numbers[i]);
+                phoneBook.put(names[i], list);
+            }
         }
     }
+}
