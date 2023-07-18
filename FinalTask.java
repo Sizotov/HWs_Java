@@ -20,6 +20,37 @@ public class FinalTask {
         for (NoteBook notebooks : set) {
             System.out.println(notebooks);
         }
+        Map<String, Integer> filters = new HashMap();
+        System.out.println("Выберите критерий поиск: ");
+        System.out.println("1 - Оперативная память ноутбука");
+        System.out.println("2 - Объем ЖД ноутбука");
+        System.out.println("3 - Операционная система ноутбука");
+        System.out.println("4 - Цвет ноутбука");
+        Scanner scanner = new Scanner(System.in);
+        int filterNumber = scanner.nextInt();
+        String filterKey = "";
+        switch(filterNumber){
+            case 1: filterKey = "ram";
+                System.out.println("Введите объем оперативной памяти в ГБ: ");
+                int ram = scanner.nextInt();
+                filters.put(filterKey, ram);
+                break;
+            case 2: filterKey = "hdd";
+                System.out.println("Введите объем ЖД в ГБ: ");
+                int hdd = scanner.nextInt();
+                filters.put(filterKey, hdd);
+                break;
+            case 3: filterKey = "os";
+                System.out.println("Введите операционную систему: ");
+                String os = scanner.next();
+                filters.put(filterKey, os);
+                break;
+            case 4: filterKey = "color";
+                System.out.println("Введите цвет: ");
+                String color = scanner.next();
+                filters.put(filterKey, color);
+                break;
+        }
 
     }
 
